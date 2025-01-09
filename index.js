@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb+srv://dineshmoorthi757:1234567890@cluster0.y5tnm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  process.env.SERVER_URI
 );
 
 app.post("/create", (req, res) => {
